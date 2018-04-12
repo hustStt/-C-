@@ -1,0 +1,5 @@
+all:
+	bison -d syntax.y
+	flex lexical2.l
+	gcc syntax.tab.c lex.yy.c tmain.c table.c -lfl -ly -o parser
+	
